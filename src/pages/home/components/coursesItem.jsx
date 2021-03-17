@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Courses({name_course, status, img, des,teacher }) {
+export default function CoursesItem({name_course, status, img, des,teacher }) {
     return (
         <div className="col-md-4 course">
         <div className="wrap">

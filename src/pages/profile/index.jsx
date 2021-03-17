@@ -1,4 +1,7 @@
 import React from 'react'
+import MyCourse from './components/myCourse'
+import MyProject from './components/myProject'
+import HistoryPament from './components/historyPament'
 
 export default function Profile() {
     return (
@@ -47,119 +50,13 @@ export default function Profile() {
                   <div className="btn main rect">LƯU LẠI</div>
                 </div>
                 <div className="tab2" style={{display: 'none'}}>
-                  <div className="item">
-                    <div className="cover">
-                      <img src="img/img3.png" alt="" />
-                    </div>
-                    <div className="info">
-                      <a href="#" className="name">
-                        front-end căn bản
-                      </a>
-                      <div className="date">Khai giảng ngày 09/09/2019</div>
-                      <div className="row">
-                        <div className>
-                          <img src="img/clock.svg" alt="" className="icon" />54 giờ
-                        </div>
-                        <div className>
-                          <img src="img/play.svg" alt="" className="icon" />25 video
-                        </div>
-                        <div className>
-                          <img src="img/user.svg" alt="" className="icon" />20 học viên
-                        </div>
-                      </div>
-                      <div className="process">
-                        <div className="line">
-                          <div className="rate" style={{width: '30%'}} />
-                        </div>
-                        30%
-                      </div>
-                      <div className="btn overlay round btn-continue">
-                        Tiếp tục học
-                      </div>
-                    </div>
-                  </div>
-                  <div className="item">
-                    <div className="cover">
-                      <img src="img/img7.png" alt="" />
-                    </div>
-                    <div className="info">
-                      <a href="#" className="name">
-                        front-end nâng cao
-                      </a>
-                      <div className="date">Khai giảng ngày 09/09/2019</div>
-                      <div className="row">
-                        <div className>
-                          <img src="img/clock.svg" alt="" className="icon" />54 giờ
-                        </div>
-                        <div className>
-                          <img src="img/play.svg" alt="" className="icon" />25 video
-                        </div>
-                        <div className>
-                          <img src="img/user.svg" alt="" className="icon" />20 học viên
-                        </div>
-                      </div>
-                      <div className="process">
-                        <div className="line">
-                          <div className="rate" style={{width: '30%'}} />
-                        </div>
-                        30%
-                      </div>
-                      <div className="btn overlay round btn-continue">
-                        Tiếp tục học
-                      </div>
-                    </div>
-                  </div>
+                  <MyCourse img="" name="Cửu âm chân kinh" date="17/12/2020" time="69" video="77" student="12" rate="30" status="0"/>
+                  <MyCourse img="" name="Cửu dương chân kinh" date="12/12/1999" time="96" video="49" student="24" rate="60" status="1"/>
                 </div>
                 <div className="tab3" style={{display: 'none'}}>
                   <div className="row">
-                    <div className="col-md-6 course">
-                      <div className="wrap">
-                        <a href="#" className="cover">
-                          <img src="img/img8.png" alt="" />
-                        </a>
-                        <div className="info">
-                          <a href="#" className="name">
-                            Furnitown
-                          </a>
-                          <p className="des">
-                            Dự án hoàn thành trong khóa CFD1 Offline của CFD Team.
-                          </p>
-                        </div>
-                        <div className="bottom">
-                          <div className="teacher">
-                            <div className="avatar">
-                              <img src="img/avt.png" alt="" />
-                            </div>
-                            <div className="name">Trần Nghĩa</div>
-                          </div>
-                          <div className="register-btn">Website</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-md-6 course">
-                      <div className="wrap">
-                        <a href="#" className="cover">
-                          <img src="img/img8.png" alt="" />
-                        </a>
-                        <div className="info">
-                          <a href="#" className="name">
-                            GboxMB
-                          </a>
-                          <p className="des">
-                            Dự án hoàn thành trong khóa CFD1 Offline của CFD Team.
-                          </p>
-                        </div>
-                        <div className="bottom">
-                          <div className="teacher">
-                            <div className="avatar">
-                              <img src="img/avt.png" alt="" />
-                            </div>
-                            <div className="name">Trần Nghĩa</div>
-                          </div>
-                          <div className="register-btn">Website</div>
-                        </div>
-                      </div>
-                    </div>
+                    <MyProject name_project="La hán thập bát chưởng" name_stu="Hoàng Minh" img_teach="" name_teach="Bí danh" species="Võ công" des="Đã hoàn thành"/>
+                    <MyProject name_project="Đả cẩu bổng" name_stu="Hoàng Minh" img_teach="" name_teach="Hồng Thất Công" species="Võ công" des="Đã hoàn thành"/>
                   </div>
                   <div className="btn-wrap">
                     <div className="btn overlay btn-icon round">
@@ -168,26 +65,10 @@ export default function Profile() {
                   </div>
                 </div>
                 <div className="tab4" style={{display: 'none'}}>
-                  <div className="item itemhistory">
-                    <div className="name">Khóa học CFD1-offline</div>
-                    <div className="date">09/09/2020</div>
-                    <div className="money">1.500.000 VND</div>
-                  </div>
-                  <div className="item itemhistory">
-                    <div className="name">Khóa học CFD1-offline</div>
-                    <div className="date">18/10/2020</div>
-                    <div className="money">1.500.000 VND</div>
-                  </div>
-                  <div className="item itemhistory">
-                    <div className="name">Khóa học CFD1-offline</div>
-                    <div className="date">18/10/2020</div>
-                    <div className="money">1.500.000 VND</div>
-                  </div>
-                  <div className="item itemhistory">
-                    <div className="name">Khóa học CFD1-offline</div>
-                    <div className="date">18/10/2020</div>
-                    <div className="money">1.500.000 VND</div>
-                  </div>
+                 <HistoryPament name="Thanh toán tiền học" date="12/12/2020"  money ="1.500.000" />
+                 <HistoryPament name="Karaoke" date="25/5/2021"  money ="1.000.000" />
+                 <HistoryPament name="Nhậu" date="14/2/2015"  money ="200.000" />
+                 <HistoryPament name="Xăng" date="16/3/2021"  money ="50.000" />
                 </div>
                 <div className="tab5 cointab" style={{display: 'block'}}>
                   <div className="coininfo">

@@ -1,7 +1,13 @@
 import React from 'react'
-import Courses from './components/courses'
+import CoursesItem from './components/coursesItem'
+import Feedback from './components/feedback'
 
 export default function Home() {
+  function ItemImg({img}){
+    return
+      <img data-flickity-lazyload={img} alt="" />
+    
+  }
     return (
     <>
 
@@ -30,14 +36,14 @@ export default function Home() {
                 <h2 className="main-title">Khóa học Offline</h2>
               </div>
               <div className="list row">
-                <Courses name_course="Web Reponsive" status="0" img="" des="Học là 9, chơi là 10" teacher="Nguyễn Văn A" />
-                <Courses name_course="Web React" status="1" img="" des="Học là 9, chơi là 10" teacher="Trần Văn B"/>
-                <Courses name_course="Java" status="2" img="" des="Học là 9, chơi là 10" teacher="Trần Dần"/>
-                <Courses name_course="C#" status="2" img="" des="Học là 9, chơi là 10" teacher="Dương Quá"/>
-                <Courses name_course="UI/UX" status="0" img="" des="Học là 9, chơi là 10" teacher="Cô Long"/>
-                <Courses name_course="Backend" status="0" img="" des="Học là 9, chơi là 10" teacher="Trần Chân"/>
-                <Courses name_course="PHP" status="" img="" des="Học là 9, chơi là 10" teacher="Trương Vô Kỵ"/>
-                <Courses name_course="Anination" status="1" img="" des="Học là 9, chơi là 10" teacher="Hàn Long"/>
+                <CoursesItem name_course="Web Reponsive" status="0" img="" des="Học là 9, chơi là 10" teacher="Nguyễn Văn A" />
+                <CoursesItem name_course="Web React" status="1" img="" des="Học là 9, chơi là 10" teacher="Trần Văn B"/>
+                <CoursesItem name_course="Java" status="2" img="" des="Học là 9, chơi là 10" teacher="Trần Dần"/>
+                <CoursesItem name_course="C#" status="2" img="" des="Học là 9, chơi là 10" teacher="Dương Quá"/>
+                <CoursesItem name_course="UI/UX" status="0" img="" des="Học là 9, chơi là 10" teacher="Cô Long"/>
+                <CoursesItem name_course="Backend" status="0" img="" des="Học là 9, chơi là 10" teacher="Trần Chân"/>
+                <CoursesItem name_course="PHP" status="" img="" des="Học là 9, chơi là 10" teacher="Trương Vô Kỵ"/>
+                <CoursesItem name_course="Anination" status="1" img="" des="Học là 9, chơi là 10" teacher="Hàn Long"/>
               </div>
             </div>
           </section>
@@ -47,14 +53,14 @@ export default function Home() {
                 <h2 className="main-title">Khóa học Online</h2>
               </div>
               <div className="list row">
-              <Courses name_course="Web Reponsive" status="0" img="" des="Học là 9, chơi là 10" teacher="Nguyễn Văn A" />
-                <Courses name_course="Web React" status="1" img="" des="Học là 9, chơi là 10" teacher="Trần Văn B"/>
-                <Courses name_course="Java" status="2" img="" des="Học là 9, chơi là 10" teacher="Trần Dần"/>
-                <Courses name_course="C#" status="2" img="" des="Học là 9, chơi là 10" teacher="Dương Quá"/>
-                <Courses name_course="UI/UX" status="0" img="" des="Học là 9, chơi là 10" teacher="Cô Long"/>
-                <Courses name_course="Backend" status="0" img="" des="Học là 9, chơi là 10" teacher="Trần Chân"/>
-                <Courses name_course="PHP" status="" img="" des="Học là 9, chơi là 10" teacher="Trương Vô Kỵ"/>
-                <Courses name_course="Anination" status="1" img="" des="Học là 9, chơi là 10" teacher="Hàn Long"/>
+                <CoursesItem name_course="Web Reponsive" status="0" img="" des="Học là 9, chơi là 10" teacher="Nguyễn Văn A" />
+                <CoursesItem name_course="Web React" status="1" img="" des="Học là 9, chơi là 10" teacher="Trần Văn B"/>
+                <CoursesItem name_course="Java" status="2" img="" des="Học là 9, chơi là 10" teacher="Trần Dần"/>
+                <CoursesItem name_course="C#" status="2" img="" des="Học là 9, chơi là 10" teacher="Dương Quá"/>
+                <CoursesItem name_course="UI/UX" status="0" img="" des="Học là 9, chơi là 10" teacher="Cô Long"/>
+                <CoursesItem name_course="Backend" status="0" img="" des="Học là 9, chơi là 10" teacher="Trần Chân"/>
+                <CoursesItem name_course="PHP" status="" img="" des="Học là 9, chơi là 10" teacher="Trương Vô Kỵ"/>
+                <CoursesItem name_course="Anination" status="1" img="" des="Học là 9, chơi là 10" teacher="Hàn Long"/>
               </div>
               <div className="text-deco">C</div>
             </div>
@@ -111,59 +117,10 @@ export default function Home() {
                 <div className="testimonial-item">
                   <div className="item">
                     <div className="text">
-                      <div className="ct ct-1 active">
-                        <div className="info">
-                          <div className="name">
-                            <h4>Tiến Tài</h4>
-                            <p>Thành viên CFD1</p>
-                          </div>
-                          <div className="quotes"><img src="/images/quotes.svg" alt="" /></div>
-                        </div>
-                        <div className="content">
-                          Mentor có tâm, tận tình. Mình tìm được hướng đi trong lập trình front-end qua
-                          khóa học. Like cho 4 mentor.
-                        </div>
-                        <div className="bottom">
-                          <a href="#" target="_blank"><img src="/images/facebook.svg" alt="" /></a>
-                          <span>09/10/2020</span>
-                        </div>
-                      </div>
-                      <div className="ct ct-2">
-                        <div className="info">
-                          <div className="name">
-                            <h4>Phạm Thành Trung</h4>
-                            <p>Thành viên CFD1</p>
-                          </div>
-                          <div className="quotes"><img src="/images/quotes.svg" alt="" /></div>
-                        </div>
-                        <div className="content">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin libero
-                          id magna finibus, in maximus urna tincidunt. Nam at leo lacinia, interdum dolor
-                          in, molestie lectus. Aenean porttitor purus at purus euismod tristique
-                        </div>
-                        <div className="bottom">
-                          <a href="#" target="_blank"><img src="/images/facebook.svg" alt="" /></a>
-                          <span>01/10/2020</span>
-                        </div>
-                      </div>
-                      <div className="ct ct-3">
-                        <div className="info">
-                          <div className="name">
-                            <h4>Nguyễn Văn Tuấn</h4>
-                            <p>Thành viên CFD1</p>
-                          </div>
-                          <div className="quotes"><img src="/images/quotes.svg" alt="" /></div>
-                        </div>
-                        <div className="content">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin libero
-                          id magna finibus, in maximus urna tincidunt. Nam at leo lacinia, interdum dolor
-                          in, molestie lectus. Aenean porttitor purus at purus euismod tristique
-                        </div>
-                        <div className="bottom">
-                          <a href="#" target="_blank"><img src="/images/facebook.svg" alt="" /></a>
-                          <span>01/10/2020</span>
-                        </div>
-                      </div>
+                      <Feedback active="active" number="1" name="Hoàng Minh" class_n="CFD5" img="" content="ờ mây zing gut jops" date="12/4/2020"/>
+                      <Feedback active="" number="2" name="Dương quá" class_n="CFD5" img="" content="ờ mây zing gut jops" date="12/4/2020"/>
+                      <Feedback active="" number="3" name="Cô long" class_n="CFD5" img="" content="ờ mây zing gut jops" date="12/4/2020"/>
+                      <Feedback active="" number="4" name="hông thất công" class_n="CFD5" img="" content="ờ mây zing gut jops" date="12/4/2020"/>
                     </div>
                     <div className="images">
                       <div className="list">
@@ -174,24 +131,7 @@ export default function Home() {
                               <img data-flickity-lazyload="/images/tes.jpg" alt="" />
                             </picture>
                           </div>
-                          <div className="ct_m">
-                            <div className="info">
-                              <div className="name">
-                                <h4>Tiến Tài</h4>
-                                <p>Thành viên CFD1</p>
-                              </div>
-                              <div className="quotes"><img src="/images/quotes.svg" alt="" /></div>
-                            </div>
-                            <div className="content">
-                              Mentor có tâm, tận tình. Mình tìm được hướng đi trong lập trình
-                              front-end qua
-                              khóa học. Like cho 4 mentor.
-                            </div>
-                            <div className="bottom">
-                              <a href="#" target="_blank"><img src="/images/facebook.svg" alt="" /></a>
-                              <span>09/10/2020</span>
-                            </div>
-                          </div>
+                          <Feedback active="active" number="1" name="Hoàng Minh" class_n="CFD5" img="" content="ờ mây zing gut jops" date="12/4/2020"/>
                         </div>
                         <div className="carousel-cell">
                           <div className="img">
@@ -200,24 +140,7 @@ export default function Home() {
                               <img data-flickity-lazyload="/images/tes.jpg" alt="" />
                             </picture>
                           </div>
-                          <div className="ct_m">
-                            <div className="info">
-                              <div className="name">
-                                <h4>Nguyễn Văn Tuấn</h4>
-                                <p>Thành viên CFD1</p>
-                              </div>
-                              <div className="quotes"><img src="/images/quotes.svg" alt="" /></div>
-                            </div>
-                            <div className="content">
-                              Mentor có tâm, tận tình. Mình tìm được hướng đi trong lập trình
-                              front-end qua
-                              khóa học. Like cho 4 mentor.
-                            </div>
-                            <div className="bottom">
-                              <a href="#" target="_blank"><img src="/images/facebook.svg" alt="" /></a>
-                              <span>09/10/2020</span>
-                            </div>
-                          </div>
+                          <Feedback active="active" number="1" name="Hoàng Minh" class_n="CFD5" img="" content="ờ mây zing gut jops" date="12/4/2020"/>
                         </div>
                         <div className="carousel-cell">
                           <div className="img">
@@ -226,24 +149,7 @@ export default function Home() {
                               <img data-flickity-lazyload="/images/tes.jpg" alt="" />
                             </picture>
                           </div>
-                          <div className="ct_m">
-                            <div className="info">
-                              <div className="name">
-                                <h4>Phạm Thành Trung</h4>
-                                <p>Thành viên CFD1</p>
-                              </div>
-                              <div className="quotes"><img src="/images/quotes.svg" alt="" /></div>
-                            </div>
-                            <div className="content">
-                              Mentor có tâm, tận tình. Mình tìm được hướng đi trong lập trình
-                              front-end qua
-                              khóa học. Like cho 4 mentor.
-                            </div>
-                            <div className="bottom">
-                              <a href="#" target="_blank"><img src="/images/facebook.svg" alt="" /></a>
-                              <span>09/10/2020</span>
-                            </div>
-                          </div>
+                          <Feedback active="active" number="1" name="Hoàng Minh" class_n="CFD5" img="" content="ờ mây zing gut jops" date="12/4/2020"/>
                         </div>
                       </div>
                     </div>
@@ -260,17 +166,14 @@ export default function Home() {
               <h2 className="main-title">Chúng ta là một team</h2>
             </div>
             <div className="list">
-              <img data-flickity-lazyload="/images/img_team1.png" alt="" />
-              <img data-flickity-lazyload="/images/img_team2.png" alt="" />
-              <img data-flickity-lazyload="/images/img_team3.png" alt="" />
-              <img data-flickity-lazyload="/images/img_team4.png" alt="" />
-              <img data-flickity-lazyload="/images/img_team3.png" alt="" />
-              <img data-flickity-lazyload="/images/img_team4.png" alt="" />
-              <img data-flickity-lazyload="/images/img_team1.png" alt="" />
-              <img data-flickity-lazyload="/images/img_team2.png" alt="" />
-              <img data-flickity-lazyload="/images/img_team3.png" alt="" />
-              <img data-flickity-lazyload="/images/img_team4.png" alt="" />
-              <img data-flickity-lazyload="/images/img_team3.png" alt="" />
+              {/* <ItemImg img="/images/img_team1.png"/>
+              <ItemImg img="/images/img_team2.png"/>
+              <ItemImg img="/images/img_team3.png"/>
+              <ItemImg img="/images/img_team4.png"/>
+              <ItemImg img="/images/img_team1.png"/>
+              <ItemImg img="/images/img_team2.png"/>
+              <ItemImg img="/images/img_team3.png"/>
+              <ItemImg img="/images/img_team4.png"/> */}
               <div className="item carousel-cell">
                 <img data-flickity-lazyload="/images/img_team4.png" alt="" />
               </div>

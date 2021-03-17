@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function MyCourse({}) {
+export default function MyCourse({img, name, date, time, video, student, rate,status}) {
     return (
         <div className="item">
                     <div className="cover">
@@ -8,28 +8,31 @@ export default function MyCourse({}) {
                     </div>
                     <div className="info">
                       <a href="#" className="name">
-                        front-end căn bản
+                        {name}
                       </a>
-                      <div className="date">Khai giảng ngày 09/09/2019</div>
+                      <div className="date">{date}</div>
                       <div className="row">
                         <div className>
-                          <img src="img/clock.svg" alt="" className="icon" />54 giờ
+                          <img src="img/clock.svg" alt="" className="icon" />{time} giờ
                         </div>
                         <div className>
-                          <img src="img/play.svg" alt="" className="icon" />25 video
+                          <img src="img/play.svg" alt="" className="icon" />{video} video
                         </div>
                         <div className>
-                          <img src="img/user.svg" alt="" className="icon" />20 học viên
+                          <img src="img/user.svg" alt="" className="icon" />{student} học viên
                         </div>
                       </div>
                       <div className="process">
                         <div className="line">
-                          <div className="rate" style={{width: '30%'}} />
+                          <div className="rate" style={{width: {rate}+'%'}} />
                         </div>
-                        30%
+                        {rate}%
                       </div>
                       <div className="btn overlay round btn-continue">
-                        Tiếp tục học
+                        {
+                            status==="0"? "Tiếp tục học"
+                            :"Tạm dừng"
+                        }
                       </div>
                     </div>
                   </div>

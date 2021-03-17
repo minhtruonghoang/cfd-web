@@ -1,9 +1,10 @@
 import React from 'react'
 
-export default function MyCoin() {
+export default function CourseDetail() {
     return (
         <div>
             
         </div>
     )
 }
+
