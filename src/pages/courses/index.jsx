@@ -1,6 +1,7 @@
 import React from 'react'
 import CoursesItem from '../home/components/coursesItem'
 
+
 export default function Courses() {
     return (
         <main className="homepage" id="main">
