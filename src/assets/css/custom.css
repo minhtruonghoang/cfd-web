@@ -1,0 +1,17 @@
+.register-course .wrap label{
+    position: relative;
+}
+.text-error{
+    position: absolute;
+    bottom: -23px;
+    width: 100%  !important;
+    color: red;
+    left: 31%;
+}
+.nav ul li a.active {
+    background: #00afab;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    color :#fff
+}

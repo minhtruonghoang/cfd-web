@@ -1,7 +1,7 @@
 import React from 'react'
 import CoursesItem from './components/coursesItem'
 import Feedback from './components/feedback'
-import Login from '../components/login'
+import Login from '../components/Login'
 
 export default function Home() {
   function ItemImg({img}){
