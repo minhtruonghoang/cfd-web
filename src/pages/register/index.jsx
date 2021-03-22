@@ -8,7 +8,7 @@ export default function Register() {
         fb:"",
         type:"",
         feedback:"",
-        coin:""
+        coin:false
     });
     let [error,setError]=useState({
         name:"",
@@ -20,10 +20,12 @@ export default function Register() {
     function inputForm(e){
         console.log(e);
         let name = e.target.name;
-        let value = e.target.value;
         let checked =e.target.checked;
+        let value = e.target.value;
+        
         let typeInput=e.target.type;
         if(typeInput==="checkbox"){
+         
             setForm({
                 ...form,
                 [name]:checked,
@@ -68,6 +70,7 @@ export default function Register() {
             errorObj.fb ="facebook không được để trống"
         }
         setError(errorObj)
+        console.log(form)
     }
     return (
         <main className="register-course" id="main">
@@ -122,6 +125,10 @@ export default function Register() {
                     </div>
                   </div>
                 </label>
+                <select name="sex" id="">
+                  <option value="1">nam</option>
+                  <option value="2">nữ</option>
+                </select>
                 <label>
                   <p>Ý kiến cá nhân</p>
                   <input onChange={inputForm} name="feedback" type="text" placeholder="Mong muốn cá nhân và lịch bạn có thể học." />

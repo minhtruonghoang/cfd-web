@@ -15,3 +15,6 @@
     -o-transition: all 0.4s;
     color :#fff
 }
+.profile .tab .tab-content .tab1 label{
+    position: relative;
+}

@@ -1,7 +1,7 @@
 import React from 'react'
 import CoursesItem from './components/coursesItem'
 import Feedback from './components/feedback'
-import Login from '../components/Login'
+import MainLayout from '../../layout/MainLayout'
 
 export default function Home() {
   function ItemImg({img}){
@@ -10,7 +10,7 @@ export default function Home() {
     
   }
     return (
-    <>
+    <MainLayout>
 
         <main className="homepage" id="main">
           <div className="banner jarallax">
@@ -234,6 +234,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-        </>
+        </MainLayout>
     )
 }

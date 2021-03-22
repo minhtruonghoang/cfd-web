@@ -12,6 +12,7 @@ export default function Profile() {
         <main className="profile" id="main">
         <section>
           <div className="top-info">
+
             <div className="avatar">
               {/* <span class="text">H</span> */}
               <img src="/images/avatar-lg.png" alt="" />
@@ -31,12 +32,11 @@ export default function Profile() {
               </div>
               <div className="tab-content">
                   <Switch>
-                  
-                  <Route path={url+'/my-course'} component={MyCourse}  />
-                  <Route path={url+'/my-project'} component={MyProject} />
-                  <Route path={url+'/history-payment'} component={HistoryPament} />
-                  <Route path={url+'/my-coin'} component={MyCoin} />
-                  <Route exact path={url} component={Info} />
+                    <Route  path={url+'/my-course'} component={MyCourse}  />
+                    <Route  path={url+'/my-project'} component={MyProject} />
+                    <Route  path={url+'/history-payment'} component={HistoryPament} />
+                    <Route  path={url+'/my-coin'} component={MyCoin} />
+                    <Route  path={url} component={Info} />
                   </Switch>
                
               </div>

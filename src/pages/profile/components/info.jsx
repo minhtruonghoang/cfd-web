@@ -28,20 +28,19 @@ export default function Info() {
             errorOjb.name="tên không được để trống"
         }
         if(form.phone===""){
-            errorOjb.name="sđt không được để trống"
+            errorOjb.phone="sđt không được để trống"
         }
         if(form.fb===""){
-            errorOjb.name="facebook không được để trống"
+            errorOjb.fb="facebook không được để trống"
         }
         if(form.skype===""){
-            errorOjb.name="skype không được để trống"
+            errorOjb.skype="skype không được để trống"
         }
-       setError(errorOjb)
+        console.log(error)
+        setError(errorOjb)
        if(Object.keys(errorOjb).length===0){
         alert("thnahf coong")
        }
-       console.log(form)
-     
     }
     return (
         <div className="tab1 active">
