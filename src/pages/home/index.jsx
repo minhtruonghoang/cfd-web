@@ -10,7 +10,7 @@ export default function Home() {
     
   }
     return (
-    <MainLayout>
+    <>
 
         <main className="homepage" id="main">
           <div className="banner jarallax">
@@ -234,6 +234,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-        </MainLayout>
+        </>
     )
 }
