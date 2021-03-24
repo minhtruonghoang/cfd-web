@@ -1,7 +1,10 @@
-import React,{useState} from 'react';
+import React,{useContext, useState} from 'react';
+import { Context } from '../../../core/AppProvider';
 
 
 export default function Info() {
+  let{user}= useContext(Context)
+
     let[form,setForm]=useState({
         name:"",
         phone:"",
@@ -46,26 +49,26 @@ export default function Info() {
         <div className="tab1 active">
                   <label>
                     <p>Họ và tên<span>*</span></p>
-                    <input onChange={Input_form} type="text" placeholder="Nguyễn Văn A" name="name" />
+                    <input onChange={Input_form} type="text" placeholder="Nguyễn Văn A" name="name" value={user.name} />
                     {error.name && <p className='text-error'>{error.name}</p>}
                   </label>
                   <label>
                     <p>Số điện thoại<span>*</span></p>
-                    <input onChange={Input_form} type="text" placeholder="0949******" name="phone" />
+                    <input onChange={Input_form} type="text" placeholder="0949******" name="phone" value={user.phone} />
                     {error.phone && <p className='text-error'>{error.phone}</p>}
                   </label>
                   <label>
                     <p>Email<span>*</span></p>
-                    <input onChange={Input_form} value="vuong.dang@dna.vn" disabled type="text" name="email" />
+                    <input onChange={Input_form} value="vuong.dang@dna.vn" disabled type="text" name="email" value={user.email} />
                   </label>
                   <label>
                     <p>Facebook<span>*</span></p>
-                    <input onChange={Input_form} type="text" placeholder="Facebook url" name="fb" />
+                    <input onChange={Input_form} type="text" placeholder="Facebook url" name="fb" value={user.fb} />
                     {error.fb && <p className='text-error'>{error.fb}</p>}
                   </label>
                   <label>
                     <p>Skype<span>*</span></p>
-                    <input onChange={Input_form} type="text" placeholder="Skype url" name="skype" />
+                    <input onChange={Input_form} type="text" placeholder="Skype url" name="skype" value={user.skype} />
                     {error.skype && <p className='text-error'>{error.skype}</p>}
                   </label>
                   <div onClick={Submit_Info} className="btn main rect">LƯU LẠI</div>

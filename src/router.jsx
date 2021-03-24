@@ -10,22 +10,23 @@ import Error from "./pages/error";
 import Email from "./pages/email";
 import MainLayout from "./layout/MainLayout";
 const routers = [
+ 
   {
     path: "/email",
+    exact:true,
     component: Email,
   },
+ 
   {
     path: "/",
     component: MainLayout,
     routers: [
       {
         path: "/contact",
-      
         component: Contact,
       },
       {
         path: "/profile",
-    
         component: Profile,
       },
       {
@@ -58,17 +59,18 @@ const routers = [
         
         component: Team,
       },
+    
       {
         path: "/",
-        
+        exact:true,
         component: Home,
       },
     ],
   },
- 
   {
     component: Error,
   },
+
  
 ];
 export default routers;

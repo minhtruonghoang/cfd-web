@@ -1,7 +1,11 @@
-import React from 'react'
-import {Link,NavLink} from 'react-router-dom'
+import React ,{useContext}from 'react'
+import {Link,NavLink, useHistory} from 'react-router-dom'
+import {Context} from '../core/AppProvider'
 
 export default function Header() {
+  let history = useHistory()
+  let {login,user,handleLogin,Logout} = useContext(Context)
+  console.log(useContext(Context))
   function openNav(){
     document.body.classList.toggle("menu-is-show");
   }
@@ -22,10 +26,10 @@ export default function Header() {
               <h1>CFD</h1>
             </Link>
             <div className="right">
-              <div className="have-login">
+             {login ? <div className="have-login" >
                 <div className="account">
                   <Link to="/profile" className="info">
-                    <div className="name">Trương Hoàng Minh</div> 
+                    <div className="name">{user.name}</div> 
                     <div className="avatar"> 
                       <img src="/images/avt.png" alt="" /> 
                     </div>
@@ -36,13 +40,16 @@ export default function Header() {
                 <div className="sub">
                   <NavLink to="#">Khóa học của tôi</NavLink>
                   <NavLink to="#">Thông tin tài khoản</NavLink>
-                  <NavLink to="#">Đăng xuất</NavLink>
+                  <NavLink to="#" onClick={Logout}>Đăng xuất</NavLink>
                 </div>
-              </div>
-              {/* <div class="not-login bg-none">
-                    <Link to="#" class="btn-register">Đăng nhập</Link>
-                    <Link to="login.html" class="btn main btn-open-login">Đăng ký</Link>
-                </div> */}
+              </div> 
+              : <div class="not-login bg-none">
+              <Link to="#" onClick={handleLogin} class="btn-register">Đăng nhập</Link>
+              <Link to="login.html" class="btn main btn-open-login">Đăng ký</Link>
+          </div>
+              }
+              
+              
             </div>
           </div>
         </header>

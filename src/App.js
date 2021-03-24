@@ -1,17 +1,14 @@
+import React,{useContext,useState,useRef} from 'react'
 import './assets/css/custom.css';
-import Reacr,{useRef} from 'react'
 import routers from './router'
 import renderRouter from "./core/RouterConfig"
-import {BrowserRouter, Switch,Route,Link} from 'react-router-dom'
-
-
+import AppProvider from './core/AppProvider';
 
 function App() {
   return (
-    <BrowserRouter>
-    {renderRouter(routers)}
-    </BrowserRouter>
+   <AppProvider>
+      {renderRouter(routers)}
+   </AppProvider> 
   );
 }
-
 export default App;

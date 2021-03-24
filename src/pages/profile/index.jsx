@@ -1,13 +1,20 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import MyCourse from './components/myCourse'
 import MyProject from './components/myProject'
 import HistoryPament from './components/historyPament'
 import Info from './components/info'
 import MyCoin from './components/myCoin'
-import {BrowserRouter, Switch,Route,NavLink, useRouteMatch} from 'react-router-dom'
+import {BrowserRouter, Switch,Route,NavLink, useRouteMatch, Redirect} from 'react-router-dom'
+import { Context } from '../../core/AppProvider'
 
 export default function Profile() {
+
   let {url}=useRouteMatch();
+  let {login,user} = useContext(Context)
+  if(!login){
+   return <Redirect path="/" />
+  }
+
     return (
         <main className="profile" id="main">
         <section>
@@ -18,8 +25,8 @@ export default function Profile() {
               <img src="/images/avatar-lg.png" alt="" />
               <div className="camera" />
             </div>
-            <div className="name">Trương Hoàng Minh</div>
-            <p className="des">Thành viên của team CFD1-OFFLINE</p>
+            <div className="name">{user.name}</div>
+            <p className="des">Thành viên của team {user.class}</p>
           </div>
           <div className="container">
             <div className="tab">
